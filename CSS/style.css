@@ -35,34 +35,32 @@ body {
     font-weight: 400;
 }
 
-.botao-local-salvar { 
+.botao {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+}
+
+.botao-local-salvar { 
     background-color:#2CBE82;
     color: #FFFFFF;
     font-size: 17px;
     font-weight: 400;
     height: 40px;
-    border: none;
     border-radius: 10px;
     padding: 1rem;
-    font-family: 'Nunito', sans-serif;
 }
 
 .botao-local-excluir { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #DA2B40;
     color: #FFFFFF;
     font-size: 17px;
     font-weight: 400;
     height: 40px;
-    border: none;
     border-radius: 10px;
     padding: 1rem;
-    font-family: 'Nunito', sans-serif;
 }
 
 .data-hora {
@@ -82,3 +80,62 @@ body {
     font-weight: 400;
     font-size: 20px;
 }
+
+/* formulário */
+
+.formulario {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;  
+}
+
+.formulario_atividade {
+    border: 1px solid #2CBE82;
+    border-radius: 10px;
+    width: 424px;
+    height: 44px;
+    padding-left: 2rem;
+}
+
+.formulario_dias {
+    width: 210px;
+    height: 44px;
+    border: 1px solid #2CBE82;
+    border-radius: 10px;
+    padding: 10px 82px 10px 12px;
+    color: #3B3E45;
+}
+
+.formulario_horario {
+    width: 102px;
+    height: 44px;
+    border: 1px solid #2CBE82;
+    border-radius: 10px;
+    color: #3B3E45;
+    padding:10px 10px;
+}
+
+
+.formulario_botaoAdicionar{
+    width: 222px;
+    height: 44px;
+    padding: 10px 12px;
+    color: #FFFFFF;
+    background: #2CBE82;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.formulario_botaoExcluir{
+    width: 184px;
+    height: 44px;
+    padding: 10px 12px;
+    color: #FFFFFF;
+    background: #DA2B40;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+}
+

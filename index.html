@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="script/data.js"></script>
+    <script defer src="script/data.js"></script>
     <title>Planejamento Semanal</title>
 </head>
 <body>
@@ -19,10 +19,10 @@
             <p>Utilize o formulário para adicionar novas tarefas:</p>
         </div>
         <div class="botao-local">
-            <button class="botao-local-salvar">Salvar localStorage</button>
+            <button class="botao-local-salvar botao">Salvar localStorage</button>
         </div>
         <div class="botao-local">
-            <button class="botao-local-excluir">Excluir localStorage</button>
+            <button class="botao-local-excluir botao">Excluir localStorage</button>
         </div>
         <div class="data-hora">
             <div class="relogio-atualizado" id="relogio-atualizado">
@@ -32,7 +32,34 @@
                 28 de setembro de 2022
             </div>
         </div>  
-       
     </header>
+    <main>
+        <form class="formulario">
+            <input class="formulario_atividade" type="text" placeholder="Atividade">
+            <select class="formulario_dias" id="dias-semana">
+                <option selected disabled value="">Dia da Semana</option>
+                <option value="Segunda-Feira">Segunda-Feira</option>
+                <option value="Terça-Feira">Terça-Feira</option>
+                <option value="Quarta-Feira">Quarta-Feira</option>
+                <option value="Quinta-Feira">Quinta-Feira</option>
+                <option value="Sexta-Feira">Sexta-Feira</option>
+                <option value="Sabado">Sabado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
+            <select class="formulario_horario" id="dias-semana-horario">
+                <option selected disabled value="">00h12min</option>
+                <option value="0">00h00min</option>
+                <option value="1">08h00min</option>
+                <option value="2">12h00min</option>
+                <option value="3">16h00min</option>
+                <option value="4">18h00min</option>
+                <option value="5">20h00min</option>
+                <option value="6">22h00min</option>
+            </select>
+            <button class="formulario_botaoAdicionar botao"><img src="/img/Shape+.svg" alt=""> Adicionar Atividade</button>
+            <button class="formulario_botaoExcluir botao"><img src="/img/Shape-.svg" alt=""> Excluir Todos</button>
+        </form>
+    </main>
+
 </body>
 </html>
