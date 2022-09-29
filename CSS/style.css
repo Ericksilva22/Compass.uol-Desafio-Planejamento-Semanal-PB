@@ -139,3 +139,90 @@ body {
     font-weight: 400;
 }
 
+/* Seção para as atividades criadas */
+
+.secao_principal {
+    display: flex;
+    background-image: url('/img/bola-LogoCompasso\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: 20rem;
+    background-position-x: right;
+    background-position-y:bottom;
+    height: 60vh;
+}
+
+.secao_horario {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.bloco_horario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 75px;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    color: #3B3E45;
+    margin: 0 1rem 0.5rem 1rem;
+}
+
+.secao_semana {
+    margin:0 1rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+}
+
+.cards-semana ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards-semana ul li {
+    width: 150px;
+    height: 33px;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 9px 9px 0px 0px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-semana ul li:nth-child(1) { 
+    background-color: #FFA246;
+}
+
+.cards-semana ul li:nth-child(2) { 
+    background-color:#35E185;
+}
+
+.cards-semana ul li:nth-child(3) { 
+    background-color: #6688FF;
+}
+
+.cards-semana ul li:nth-child(4) { 
+    background-color:#B266FF;
+}
+
+.cards-semana ul li:nth-child(5) { 
+    background-color: #66D1FF;
+}
+
+.cards-semana ul li:nth-child(6) { 
+    background-color:#FF66D4;
+}
+
+.cards-semana ul li:nth-child(7) { 
+    background-color: #FF6666;
+}
+
