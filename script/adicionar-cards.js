@@ -11,7 +11,18 @@ const secao_horario = document.querySelector('.secao_horario');
 //funções
 
 // função para criar os cards a partir do conteudo digitado pelo usuario no formulário
-const salvandoAtividade = (texto) => {
+const salvandoAtividade = (texto, Hora) => {
+
+    //Criando estrutura HTML - div bloco_horario
+    const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
+    div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+
+    const horarioDigitado = document.createElement("p");
+    horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
+    div_cards_hora.appendChild(horarioDigitado);
+    
+    
+    //Criando estrutura HTML - div cards-atividade
     const div_cards = document.createElement("div"); //criando div para o novo card inserido
     div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
@@ -29,22 +40,20 @@ const salvandoAtividade = (texto) => {
     botaoDeletar.innerHTML = 'Apagar';
     div_cards.appendChild(botaoDeletar); // inserindo botao de apagar no card
 
-    cronograma_atividades.appendChild(div_cards);
+    //Criando estrutura HTML div detalhamento_atividades
+    const div_detalhamento = document.createElement("div");
+    div_detalhamento.classList.add("detalhamento_atividades");
+
+    //inserindo a div bloco_horario dentro da div detalhamento_atividades
+    div_detalhamento.appendChild(div_cards_hora);
+
+    //inserindo a div cards-atividade dentro da div detalhamento_atividades
+    div_detalhamento.appendChild(div_cards);
+
+    // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+    cronograma_atividades.appendChild(div_detalhamento);
 
     entrada.value = ""; //limpando o conteudo digitado no input text
-}
-
-// função para criar o card que mostra o horário da atividade
-const salvandoHorario = (Hora) => {
-    const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
-    div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
-
-    const horarioDigitado = document.createElement("p");
-    horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
-    div_cards_hora.appendChild(horarioDigitado);
-
-    secao_horario.appendChild(div_cards_hora);
-
 }
 
 botaoAdicionarAtividade.addEventListener("click", (envio) =>{
@@ -54,7 +63,6 @@ botaoAdicionarAtividade.addEventListener("click", (envio) =>{
     const conteudoHora =  horario.value;
 
     if(conteudoEntrada && conteudoHora) {
-        salvandoAtividade(conteudoEntrada); // chamando função para criar o card da atividade
-        salvandoHorario(conteudoHora); // chamando função
+        salvandoAtividade(conteudoEntrada, conteudoHora); // chamando função para criar o card da atividade
     }
 })

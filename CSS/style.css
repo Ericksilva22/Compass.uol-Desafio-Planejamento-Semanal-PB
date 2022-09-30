@@ -159,6 +159,11 @@ body {
 
 .secao_principal {
     display: flex;
+    flex-direction: column;
+}
+
+.secao_abas {
+    display: flex;
 }
 
 .secao_horario {
@@ -240,7 +245,13 @@ body {
 /* Cards paras as atividades criadas */
 
 .cronograma_atividades {
-    margin-top: 3.7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhamento_atividades {
+    display: flex;
+    margin-bottom: 0.5rem;
 }
 
 .cards-atividades{

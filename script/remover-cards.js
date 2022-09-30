@@ -3,7 +3,7 @@
 //Funcionalidade para o botão de apagar do card de atividade e Funcionalidade para o botão de Excluir Todos
 document.addEventListener("click", (selecao) =>{
     const elementoSelecionado = selecao.target;
-    const elementoPai = elementoSelecionado.closest("div");
+    const elementoPai = elementoSelecionado.closest(".detalhamento_atividades");
 
     const cardsCriados = document.querySelectorAll('.cards-atividades')
 
