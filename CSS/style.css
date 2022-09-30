@@ -1,5 +1,11 @@
 body {
     font-family: 'Poppins', sans-serif;
+    background-image: url('/img/bola-LogoCompasso\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: 20rem;
+    background-position-x: right;
+    background-position-y:bottom;
+    height: 100vh;
 }
 
 /* Cabecalho */
@@ -127,12 +133,10 @@ body {
     font-size: 17px;
     font-weight: 400;
     cursor: pointer;
-    transition: 400ms;
+    transition: all 400ms ease-in-out;
 }
 
-.formulario_botaoAdicionar:hover{
-    opacity: 0.5;
-}
+
 
 .formulario_botaoExcluir{
     width: 184px;
@@ -143,18 +147,18 @@ body {
     border-radius: 10px;
     font-size: 17px;
     font-weight: 400;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.formulario_botaoAdicionar:hover, .formulario_botaoExcluir:hover {
+    opacity: 0.5;
 }
 
 /* Seção para as atividades criadas */
 
 .secao_principal {
     display: flex;
-    background-image: url('/img/bola-LogoCompasso\ 1.svg');
-    background-repeat: no-repeat;
-    background-size: 20rem;
-    background-position-x: right;
-    background-position-y:bottom;
-    height: 60vh;
 }
 
 .secao_horario {
@@ -162,6 +166,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    height: auto;
 }
 
 .bloco_horario {
@@ -284,4 +289,11 @@ body {
     font-size: 14px;
     margin-top: 1rem;
     margin-right: 0.2rem;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.cards-atividades-botao:hover{
+    width: 60px;
+    height: 27px;
 }
