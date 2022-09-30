@@ -126,6 +126,12 @@ body {
     border-radius: 10px;
     font-size: 17px;
     font-weight: 400;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.formulario_botaoAdicionar:hover{
+    opacity: 0.5;
 }
 
 .formulario_botaoExcluir{
@@ -163,7 +169,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 85px;
-    height: 75px;
+    height: 85px;
     box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
     border-radius: 10px;
     font-weight: 400;
@@ -229,11 +235,12 @@ body {
 /* Cards paras as atividades criadas */
 
 .cronograma_atividades {
-    margin-top: 2.8rem;
+    margin-top: 3.7rem;
 }
 
 .cards-atividades{
     display: flex;
+    justify-content: space-between;
     width: 512px;
     height: 85px;
     background: linear-gradient(112.83deg, rgba(228, 240, 248, 0.42) 0%, rgba(255, 255, 255, 0.336) 110.84%);
@@ -241,25 +248,27 @@ body {
     box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
     backdrop-filter: blur(10.5px);
     border-radius: 15px;
+    margin-bottom: 0.4rem;
 }
 
-.cards-atividades span { /* Retangulo colorido para os cards */
+.cards-retangulo { /* Retangulo colorido para os cards */
     background-color: #6688FF;
     color: #6688FF;
     border-radius:15px 0px 0px 15px;
+    border: none;
     width: 14px;
     height: 85px;
     display: flex;
     align-items: center;
 }
 
-.cards-atividades p {
+.cards-atividades-paragrafo {
     font-weight: 400;
     font-size: 20px;
     padding: 1rem;
 }
 
-.cards-atividades button {
+.cards-atividades-botao {
     display: flex;
     justify-content: center;
     align-items: center;

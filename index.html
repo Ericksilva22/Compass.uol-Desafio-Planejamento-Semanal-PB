@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <script defer src="script/data.js"></script>
+    <script defer src="script/adicionar-cards.js"></script>
     <title>Planejamento Semanal</title>
 </head>
 <body>
@@ -34,8 +35,8 @@
         </div>  
     </header>
     <main>
-        <form class="formulario">
-            <input class="formulario_atividade" type="text" placeholder="Atividade">
+        <form class="formulario" id="formulario_geral">
+            <input class="formulario_atividade" id="formulario_entrada" type="text" placeholder="Atividade">
             <select class="formulario_dias" id="dias-semana">
                 <option selected disabled value="">Dia da Semana</option>
                 <option value="Segunda-Feira">Segunda-Feira</option>
@@ -47,14 +48,14 @@
                 <option value="Domingo">Domingo</option>
             </select>
             <select class="formulario_horario" id="dias-semana-horario">
-                <option selected disabled value="">00h12min</option>
-                <option value="0">00h00min</option>
-                <option value="1">08h00min</option>
-                <option value="2">12h00min</option>
-                <option value="3">16h00min</option>
-                <option value="4">18h00min</option>
-                <option value="5">20h00min</option>
-                <option value="6">22h00min</option>
+                <option selected disabled value="">00h12m</option>
+                <option value="00h00m">00h00m</option>
+                <option value="08h00m">08h00m</option>
+                <option value="12h00m">12h00m</option>
+                <option value="16h00m">16h00m</option>
+                <option value="18h00m">18h00m</option>
+                <option value="20h00m">20h00m</option>
+                <option value="22h00m">22h00m</option>
             </select>
             <button class="formulario_botaoAdicionar botao"><img src="/img/Shape+.svg" alt=""> Adicionar Atividade</button>
             <button class="formulario_botaoExcluir botao"><img src="/img/Shape-.svg" alt=""> Excluir Todos</button>
@@ -62,7 +63,7 @@
         <section class="secao_principal">
             <section class="secao_horario">
                 <div class="bloco_horario">
-                    <p>Horário</p>
+                    <p class="bloco_horario-paragrafo">Horário</p>
                 </div>
             </section>
             <section class="secao_semana">
@@ -92,10 +93,10 @@
                     </ul>
                 </div>
                 <div class="cronograma_atividades">
-                    <div class="cards-atividades">
-                        <span>12</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <button>Apagar</button>
+                    <div style="display:none;" class="cards-atividades">
+                        <button class="cards-retangulo"></button>
+                        <p class="cards-atividades-paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <button class="cards-atividades-botao">Apagar</button>
                     </div>
                 </div>
             </section>
