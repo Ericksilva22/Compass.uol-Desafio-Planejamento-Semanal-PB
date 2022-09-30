@@ -226,3 +226,53 @@ body {
     background-color: #FF6666;
 }
 
+/* Cards paras as atividades criadas */
+
+.cronograma_atividades {
+    margin-top: 2.8rem;
+}
+
+.cards-atividades{
+    display: flex;
+    width: 512px;
+    height: 85px;
+    background: linear-gradient(112.83deg, rgba(228, 240, 248, 0.42) 0%, rgba(255, 255, 255, 0.336) 110.84%);
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(10.5px);
+    border-radius: 15px;
+}
+
+.cards-atividades span { /* Retangulo colorido para os cards */
+    background-color: #6688FF;
+    color: #6688FF;
+    border-radius:15px 0px 0px 15px;
+    width: 14px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+}
+
+.cards-atividades p {
+    font-weight: 400;
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.cards-atividades button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 57px;
+    height: 25px;
+    background: #98031E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 1rem;
+    margin-right: 0.2rem;
+}
