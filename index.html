@@ -12,6 +12,7 @@
     <script defer src="script/data.js"></script>
     <script defer src="script/adicionar-cards.js"></script>
     <script defer src="script/remover-cards.js"></script>
+    <script defer src="script/alterar-Dia-da-Semana.js"></script>
     <title>Planejamento Semanal</title>
 </head>
 <body>
@@ -40,13 +41,13 @@
             <input class="formulario_atividade" id="formulario_entrada" type="text" placeholder="Atividade">
             <select class="formulario_dias" id="dias-semana">
                 <option selected disabled value="">Dia da Semana</option>
-                <option value="Segunda-Feira">Segunda-Feira</option>
-                <option value="Terça-Feira">Terça-Feira</option>
-                <option value="Quarta-Feira">Quarta-Feira</option>
-                <option value="Quinta-Feira">Quinta-Feira</option>
-                <option value="Sexta-Feira">Sexta-Feira</option>
-                <option value="Sabado">Sabado</option>
-                <option value="Domingo">Domingo</option>
+                <option value="1">Segunda-Feira</option>
+                <option value="2">Terça-Feira</option>
+                <option value="3">Quarta-Feira</option>
+                <option value="4">Quinta-Feira</option>
+                <option value="5">Sexta-Feira</option>
+                <option value="6">Sabado</option>
+                <option value="7">Domingo</option>
             </select>
             <select class="formulario_horario" id="dias-semana-horario">
                 <option selected disabled value="">00h12m</option>
@@ -71,41 +72,40 @@
                 <section class="secao_semana">
                     <div class="cards-semana">
                         <ul>
-                            <li>
-                                Segunda-Feira
+                            <li id="botaoSegunda">
+                               Segunda-Feira
                             </li>
-                            <li>
+                            <li id="botaoTerca">
                                 Terça-Feira
                             </li>
-                            <li>
+                            <li id="botaoQuarta">
                                 Quarta-Feira
                             </li>
-                            <li>
+                            <li id="botaoQuinta">
                                 Quinta-Feira
                             </li>
-                            <li>
+                            <li id="botaoSexta">
                                 Sexta-Feira
                             </li>
-                            <li>
+                            <li id="botaoSabado">
                                 Sábado
                             </li>
-                            <li>
+                            <li id="botaoDomingo">
                                 Domingo
                             </li>
                         </ul>
                     </div>
                 </section>
             </section>
-            <div class="cronograma_atividades">
-                <div style="display:none;" class="detalhamento_atividades">
-                    <div class="bloco_horario">
-                        <p class="bloco_horario-paragrafo">Horário</p>
-                    </div>
-                    <div class="cards-atividades">
-                        <button class="cards-retangulo"></button>
-                        <p class="cards-atividades-paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        <button class="cards-atividades-botao">Apagar</button>
-                    </div>
+            <div class="cronograma_atividades" id="conteudo-segunda">
+                <div class="detalhamento_atividades">
+                    
+                </div> 
+            </div>
+
+            <div class="cronograma_atividades" id="conteudo-terca">
+                <div class="detalhamento_atividades">
+                    
                 </div> 
             </div>
         </section>
