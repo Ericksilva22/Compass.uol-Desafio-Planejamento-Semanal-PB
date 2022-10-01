@@ -5,17 +5,49 @@ document.addEventListener("click", (selecao) =>{
     const elementoSelecionado = selecao.target;
     const elementoPai = elementoSelecionado.closest(".detalhamento_atividades");
 
-    const cardsCriados = document.querySelectorAll('.cards-atividades')
+    const cardsCriados = document.querySelectorAll('.cards-atividades');
 
     //excluindo card selecionado
     if(elementoSelecionado.classList.contains("cards-atividades-botao")) {
         elementoPai.remove();
     }
+})
 
-    //excluindo todos os cards
-    if(elementoSelecionado.classList.contains("formulario_botaoExcluir")) {
-        cardsCriados.remove();
+//excluindo todos os cards do dia selecionado
+const botaoExcluirTodos = document.querySelector('.formulario_botaoExcluir');
+
+botaoExcluirTodos.addEventListener("click", (envio) =>{
+    
+    envio.preventDefault();
+   
+   if(conteudo_segunda.style.display == "flex") { //identificando dia selecionado
+        while(conteudo_segunda.childElementCount != 0){ // necessario para apagar todos os cards do dia
+            document.querySelector(".cards-segunda").outerHTML = ""; //removendo cards
+        }
+    } else if (conteudo_terca.style.display == "flex") { 
+        while(conteudo_terca.childElementCount != 0){
+            document.querySelector(".cards-terca").outerHTML = ""; 
+        }
+    } else if (conteudo_quarta.style.display == "flex") { 
+        while(conteudo_quarta.childElementCount != 0){
+            document.querySelector(".cards-quarta").outerHTML = ""; 
+        }
+    } else if (conteudo_quinta.style.display == "flex") { 
+        while(conteudo_quinta.childElementCount != 0){
+            document.querySelector(".cards-quainta").outerHTML = ""; 
+        }
+    } else if (conteudo_sexta.style.display == "flex") { 
+        while(conteudo_sexta.childElementCount != 0){
+            document.querySelector(".cards-sexta").outerHTML = ""; 
+        }
+    } else if (conteudo_sabado.style.display == "flex") { 
+        while(conteudo_sabado.childElementCount != 0){
+            document.querySelector(".cards-sabado").outerHTML = ""; 
+        }
+    } else if (conteudo_domingo.style.display == "flex") { 
+        while(conteudo_domingo.childElementCount != 0){
+            document.querySelector(".cards-domingo").outerHTML = ""; 
+        }
     }
 
-
-});
+})

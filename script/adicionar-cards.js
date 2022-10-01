@@ -53,6 +53,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
     //Criando estrutura HTML div detalhamento_atividades
     const div_detalhamento = document.createElement("div");
     div_detalhamento.classList.add("detalhamento_atividades");
+    div_detalhamento.classList.add("cards-segunda"); //usada futuramente para excluir todos os cards excluidos para segunda no arquivo remover-cards.js
 
     //inserindo a div bloco_horario dentro da div detalhamento_atividades
     div_detalhamento.appendChild(div_cards_hora);
@@ -97,6 +98,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML div detalhamento_atividades
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
+        div_detalhamento.classList.add("cards-terca");
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -140,6 +142,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML div detalhamento_atividades
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
+        div_detalhamento.classList.add("cards-quarta");
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -183,6 +186,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML div detalhamento_atividades
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
+        div_detalhamento.classList.add("cards-quinta");
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -226,6 +230,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML div detalhamento_atividades
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
+        div_detalhamento.classList.add("cards-sexta");
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -269,6 +274,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML div detalhamento_atividades
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
+        div_detalhamento.classList.add("cards-sabado");
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -312,6 +318,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML div detalhamento_atividades
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
+        div_detalhamento.classList.add("cards-domingo");
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
