@@ -22,7 +22,6 @@ const conteudo_domingo = document.querySelector('#conteudo-domingo');
 const salvandoAtividade = (texto, diaSemana, Hora) => {
 
     if(diaSemana == 1){//executando ao selecionar segunda-feira
-
         //Criando estrutura HTML - div bloco_horario
     const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
     div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
@@ -335,6 +334,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
     
 }
 
+
+
 botaoAdicionarAtividade.addEventListener("click", (envio) =>{
 
     envio.preventDefault();
@@ -342,8 +343,23 @@ botaoAdicionarAtividade.addEventListener("click", (envio) =>{
     const conteudoDia =  dia.value;
     const conteudoHora =  horario.value;
     
-
-    if(conteudoEntrada && conteudoHora) {
+   
+    if(conteudoEntrada && conteudoDia && conteudoHora) {
+        adicionarLocalStorage(); //chamando função para armazenar valores na localStorage
         salvandoAtividade(conteudoEntrada, conteudoDia, conteudoHora); // chamando função para criar o card da atividade
+        
     }
 })
+
+function adicionarLocalStorage(){
+    const item = {
+        atividade: entrada.value,
+        DiaSelecionado: dia.value,
+        horaSelecionada: horario.value,
+    }
+    items.push(item)
+}
+
+
+
+
