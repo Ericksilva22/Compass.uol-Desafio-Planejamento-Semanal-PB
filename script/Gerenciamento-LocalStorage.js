@@ -15,7 +15,7 @@ botao_salvar_local.addEventListener("click", () =>{
 //Exibindo os cards salvos na localStorage ao recarregar a página
 window.addEventListener('load', () => {
     conteudo_segunda.style.display = "flex" //exibir inicialmente conteúdo da segunda-feira
-    if(items.length !=0){ // percorre todos os dados da localStorage para criar novamente o conteudo da última seção
+    if(items.length !=0){ // percorre todos os dados da localStorage para criar novamente o conteudo da última sessão
         for(let i = 0; i < items.length; i++){
             salvandoAtividade(items[i].atividade, items[i].DiaSelecionado, items[i].horaSelecionada);
         }

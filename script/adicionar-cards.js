@@ -16,54 +16,70 @@ const conteudo_sexta = document.querySelector('#conteudo-sexta');
 const conteudo_sabado = document.querySelector('#conteudo-sabado');
 const conteudo_domingo = document.querySelector('#conteudo-domingo');
 
+//vetor para comparar os valores do horario dos cards inserido
+/*let vetorHora_Segunda = [];*/
+
 //funções
 
 // função para criar os cards a partir do conteudo digitado pelo usuario no formulário
 const salvandoAtividade = (texto, diaSemana, Hora) => {
 
     if(diaSemana == 1){//executando ao selecionar segunda-feira
+        
+        /*
+        Casos de cards com horarios iguais
+        for(let i = 0; i < vetorHora_Segunda.length; i++){
+            if(conteudo_segunda.childElementCount > 0 && Hora == vetorHora_Segunda[i]){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
+                alert('horario existe');
+            }
+        }
+        vetorHora_Segunda.push(Hora); //armazenando valor de entrada no vetor correspondente
+        */
+        
         //Criando estrutura HTML - div bloco_horario
-    const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
-    div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+        const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
+        div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
 
-    const horarioDigitado = document.createElement("p");
-    horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
-    div_cards_hora.appendChild(horarioDigitado);
-    
-    
-    //Criando estrutura HTML - div cards-atividade
-    const div_cards = document.createElement("div"); //criando div para o novo card inserido
-    div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
+        const horarioDigitado = document.createElement("p");
+        horarioDigitado.innerText = Hora; //inserindo o horario para a  atividade digitada 
+        
+        div_cards_hora.appendChild(horarioDigitado);
+        
+        
+        //Criando estrutura HTML - div cards-atividade
+        const div_cards = document.createElement("div"); //criando div para o novo card inserido
+        div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
-    const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
-    cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
-    div_cards.appendChild(cardsRetangulo);
+        const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
+        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
+        div_cards.appendChild(cardsRetangulo);
 
-    const div_cardsTitulo = document.createElement("p");
-    div_cardsTitulo.classList.add("cards-atividades-paragrafo");
-    div_cardsTitulo.innerText = texto; //inserindo a atividade digitada 
-    div_cards.appendChild(div_cardsTitulo);
+        const div_cardsTitulo = document.createElement("p");
+        div_cardsTitulo.classList.add("cards-atividades-paragrafo");
+        div_cardsTitulo.innerText = texto; //inserindo a atividade digitada 
+        div_cards.appendChild(div_cardsTitulo);
 
-    const botaoDeletar = document.createElement("button");
-    botaoDeletar.classList.add("cards-atividades-botao");
-    botaoDeletar.innerHTML = 'Apagar';
-    div_cards.appendChild(botaoDeletar); // inserindo botao de apagar no card
+        const botaoDeletar = document.createElement("button");
+        botaoDeletar.classList.add("cards-atividades-botao");
+        botaoDeletar.innerHTML = 'Apagar';
+        div_cards.appendChild(botaoDeletar); // inserindo botao de apagar no card
 
-    //Criando estrutura HTML div detalhamento_atividades
-    const div_detalhamento = document.createElement("div");
-    div_detalhamento.classList.add("detalhamento_atividades");
-    div_detalhamento.classList.add("cards-segunda"); //usada futuramente para excluir todos os cards excluidos para segunda no arquivo remover-cards.js
+        //Criando estrutura HTML div detalhamento_atividades
+        const div_detalhamento = document.createElement("div");
+        div_detalhamento.classList.add("detalhamento_atividades");
+        div_detalhamento.classList.add("cards-segunda"); //usada futuramente para excluir todos os cardspara segunda no arquivo remover-cards.js
+        div_detalhamento.setAttribute("hora_atividade", Hora); //setando valor do horario na div para auxiliar na função de ordenar os cards
 
-    //inserindo a div bloco_horario dentro da div detalhamento_atividades
-    div_detalhamento.appendChild(div_cards_hora);
+        //inserindo a div bloco_horario dentro da div detalhamento_atividades
+        div_detalhamento.appendChild(div_cards_hora);
 
-    //inserindo a div cards-atividade dentro da div detalhamento_atividades
-    div_detalhamento.appendChild(div_cards);
+        //inserindo a div cards-atividade dentro da div detalhamento_atividades
+        div_detalhamento.appendChild(div_cards);
 
-    // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
-    conteudo_segunda.appendChild(div_detalhamento);
+        // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+        conteudo_segunda.appendChild(div_detalhamento);
 
-    entrada.value = ""; //limpando o conteudo digitado no input text
+        entrada.value = ""; //limpando o conteudo digitado no input text
 
     } else if(diaSemana == 2){ //para terça feira
 
@@ -98,6 +114,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-terca");
+        div_detalhamento.setAttribute("hora_atividade", Hora);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -142,6 +159,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-quarta");
+        div_detalhamento.setAttribute("hora_atividade", Hora);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -186,6 +204,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-quinta");
+        div_detalhamento.setAttribute("hora_atividade", Hora);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -230,6 +249,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-sexta");
+        div_detalhamento.setAttribute("hora_atividade", Hora);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -274,6 +294,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-sabado");
+        div_detalhamento.setAttribute("hora_atividade", Hora);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -318,6 +339,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-domingo");
+        div_detalhamento.setAttribute("hora_atividade", Hora);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -330,24 +352,27 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
 
         entrada.value = ""; //limpando o conteudo digitado no input text
     }
-
     
 }
 
-
-
-botaoAdicionarAtividade.addEventListener("click", (envio) =>{
+botaoAdicionarAtividade.addEventListener("click", (envio) =>{ //evento de click para o botão adicionar atividade
 
     envio.preventDefault();
     const conteudoEntrada = entrada.value;
     const conteudoDia =  dia.value;
     const conteudoHora =  horario.value;
-    
    
     if(conteudoEntrada && conteudoDia && conteudoHora) {
         adicionarLocalStorage(); //chamando função para armazenar valores na localStorage
         salvandoAtividade(conteudoEntrada, conteudoDia, conteudoHora); // chamando função para criar o card da atividade
-        
+        //chamando funções para ordenar os cards
+        ordenarCardsSegunda(); 
+        ordenarCardsTerca();
+        ordenarCardsQuarta();
+        ordenarCardsQuinta();
+        ordenarCardsSexta();
+        ordenarCardsSabado();
+        ordenarCardsDomingo();
     }
 })
 
@@ -359,6 +384,169 @@ function adicionarLocalStorage(){
     }
     items.push(item)
 }
+
+function ordenarCardsSegunda(){
+    // Selecionando as divs criadas para segunda-feira
+    var divsCriadas = document.querySelectorAll('#conteudo-segunda .detalhamento_atividades');
+
+    //criando um vetor com as divs criadas para os cards
+    var ordem = [].map.call(divsCriadas, function(elemento) {
+        return elemento;
+    });
+
+    // Ordenando o vetor pelo atributo do horario de forma crescente
+    ordem.sort(function(primeiro,segundo) {
+        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
+        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
+        return primeiro - segundo;
+    });
+
+    // Ordenando os cards na tela
+    var divPai = document.querySelector('#conteudo-segunda');
+    for(var i=0; i<ordem.length; i++) {
+        divPai.appendChild(ordem[i]);   
+    }
+}
+
+
+function ordenarCardsTerca(){
+    // Selecionando as divs criadas para Terça-feira
+    var divsCriadas = document.querySelectorAll('#conteudo-terca .detalhamento_atividades');
+
+    //criando um vetor com as divs criadas para os cards
+    var ordem = [].map.call(divsCriadas, function(elemento) {
+        return elemento;
+    });
+
+    // Ordenando o vetor pelo atributo do horario de forma crescente
+    ordem.sort(function(primeiro,segundo) {
+        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
+        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
+        return primeiro - segundo;
+    });
+
+    // Ordenando os cards na tela
+    var divPai = document.querySelector('#conteudo-terca');
+    for(var i=0; i<ordem.length; i++) {
+        divPai.appendChild(ordem[i]);   
+    }
+}
+
+function ordenarCardsQuarta(){
+    // Selecionando as divs criadas para Quarta-feira
+    var divsCriadas = document.querySelectorAll('#conteudo-quarta .detalhamento_atividades');
+
+    //criando um vetor com as divs criadas para os cards
+    var ordem = [].map.call(divsCriadas, function(elemento) {
+        return elemento;
+    });
+
+    // Ordenando o vetor pelo atributo do horario de forma crescente
+    ordem.sort(function(primeiro,segundo) {
+        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
+        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
+        return primeiro - segundo;
+    });
+
+    // Ordenando os cards na tela
+    var divPai = document.querySelector('#conteudo-quarta');
+    for(var i=0; i<ordem.length; i++) {
+        divPai.appendChild(ordem[i]);   
+    }
+}
+
+function ordenarCardsQuinta(){
+    // Selecionando as divs criadas para Quinta-feira
+    var divsCriadas = document.querySelectorAll('#conteudo-quinta .detalhamento_atividades');
+
+    //criando um vetor com as divs criadas para os cards
+    var ordem = [].map.call(divsCriadas, function(elemento) {
+        return elemento;
+    });
+
+    // Ordenando o vetor pelo atributo do horario de forma crescente
+    ordem.sort(function(primeiro,segundo) {
+        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
+        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
+        return primeiro - segundo;
+    });
+
+    // Ordenando os cards na tela
+    var divPai = document.querySelector('#conteudo-quinta');
+    for(var i=0; i<ordem.length; i++) {
+        divPai.appendChild(ordem[i]);   
+    }
+}
+
+function ordenarCardsSexta(){
+    // Selecionando as divs criadas para Sexta-feira
+    var divsCriadas = document.querySelectorAll('#conteudo-sexta .detalhamento_atividades');
+
+    //criando um vetor com as divs criadas para os cards
+    var ordem = [].map.call(divsCriadas, function(elemento) {
+        return elemento;
+    });
+
+    // Ordenando o vetor pelo atributo do horario de forma crescente
+    ordem.sort(function(primeiro,segundo) {
+        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
+        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
+        return primeiro - segundo;
+    });
+
+    // Ordenando os cards na tela
+    var divPai = document.querySelector('#conteudo-sexta');
+    for(var i=0; i<ordem.length; i++) {
+        divPai.appendChild(ordem[i]);   
+    }
+}
+
+function ordenarCardsSabado(){
+    // Selecionando as divs criadas para Sexta-feira
+    var divsCriadas = document.querySelectorAll('#conteudo-sabado .detalhamento_atividades');
+
+    //criando um vetor com as divs criadas para os cards
+    var ordem = [].map.call(divsCriadas, function(elemento) {
+        return elemento;
+    });
+
+    // Ordenando o vetor pelo atributo do horario de forma crescente
+    ordem.sort(function(primeiro,segundo) {
+        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
+        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
+        return primeiro - segundo;
+    });
+
+    // Ordenando os cards na tela
+    var divPai = document.querySelector('#conteudo-sabado');
+    for(var i=0; i<ordem.length; i++) {
+        divPai.appendChild(ordem[i]);   
+    }
+}
+
+function ordenarCardsDomingo(){
+    // Selecionando as divs criadas para Domingo-feira
+    var divsCriadas = document.querySelectorAll('#conteudo-domingo .detalhamento_atividades');
+
+    //criando um vetor com as divs criadas para os cards
+    var ordem = [].map.call(divsCriadas, function(elemento) {
+        return elemento;
+    });
+
+    // Ordenando o vetor pelo atributo do horario de forma crescente
+    ordem.sort(function(primeiro,segundo) {
+        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
+        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
+        return primeiro - segundo;
+    });
+
+    // Ordenando os cards na tela
+    var divPai = document.querySelector('#conteudo-domingo');
+    for(var i=0; i<ordem.length; i++) {
+        divPai.appendChild(ordem[i]);   
+    }
+}
+
 
 
 
