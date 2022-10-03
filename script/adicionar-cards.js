@@ -51,7 +51,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
         const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
-        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
+        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe para estilo do retangulo
+        cardsRetangulo.classList.add("retangulo-segunda"); //adicionando cor do retangulo
         div_cards.appendChild(cardsRetangulo);
 
         const div_cardsTitulo = document.createElement("p");
@@ -97,7 +98,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
         const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
-        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
+        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe para estilo do retangulo
+        cardsRetangulo.classList.add("retangulo-terca"); //adicionando cor do retangulo
         div_cards.appendChild(cardsRetangulo);
 
         const div_cardsTitulo = document.createElement("p");
@@ -142,7 +144,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
         const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
-        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
+        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe para estilo do retangulo
+        cardsRetangulo.classList.add("retangulo-quarta"); //adicionando cor do retangulo
         div_cards.appendChild(cardsRetangulo);
 
         const div_cardsTitulo = document.createElement("p");
@@ -187,7 +190,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
         const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
-        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
+        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe para estilo do retangulo
+        cardsRetangulo.classList.add("retangulo-quinta"); //adicionando cor do retangulo
         div_cards.appendChild(cardsRetangulo);
 
         const div_cardsTitulo = document.createElement("p");
@@ -232,7 +236,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
         const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
-        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
+        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe para estilo do retangulo
+        cardsRetangulo.classList.add("retangulo-sexta"); //adicionando cor do retangulo
         div_cards.appendChild(cardsRetangulo);
 
         const div_cardsTitulo = document.createElement("p");
@@ -277,7 +282,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
         const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
-        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
+        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe para estilo do retangulo
+        cardsRetangulo.classList.add("retangulo-sabado"); //adicionando cor do retangulo
         div_cards.appendChild(cardsRetangulo);
 
         const div_cardsTitulo = document.createElement("p");
@@ -322,7 +328,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards.classList.add("cards-atividades"); //adicionando a classe respectiva para as divs dos cards de atividade
 
         const cardsRetangulo = document.createElement("button"); // criando retangulo para o card de atividade
-        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe
+        cardsRetangulo.classList.add("cards-retangulo"); //adicionando classe para estilo do retangulo
+        cardsRetangulo.classList.add("retangulo-domingo"); //adicionando cor do retangulo
         div_cards.appendChild(cardsRetangulo);
 
         const div_cardsTitulo = document.createElement("p");

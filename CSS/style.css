@@ -281,31 +281,31 @@ main::-webkit-scrollbar-thumb {
     width: 190px;
 }
 
-.cards-semana ul li:nth-child(1) { 
+.cards-semana ul li:nth-child(1), .retangulo-segunda { 
     background-color: #FFA246;
 }
 
-.cards-semana ul li:nth-child(2) { 
+.cards-semana ul li:nth-child(2), .retangulo-terca { 
     background-color:#35E185;
 }
 
-.cards-semana ul li:nth-child(3) { 
+.cards-semana ul li:nth-child(3), .retangulo-quarta { 
     background-color: #6688FF;
 }
 
-.cards-semana ul li:nth-child(4) { 
+.cards-semana ul li:nth-child(4), .retangulo-quinta { 
     background-color:#B266FF;
 }
 
-.cards-semana ul li:nth-child(5) { 
+.cards-semana ul li:nth-child(5), .retangulo-sexta { 
     background-color: #66D1FF;
 }
 
-.cards-semana ul li:nth-child(6) { 
+.cards-semana ul li:nth-child(6), .retangulo-sabado { 
     background-color:#FF66D4;
 }
 
-.cards-semana ul li:nth-child(7) { 
+.cards-semana ul li:nth-child(7), .retangulo-domingo { 
     background-color: #FF6666;
 }
 
@@ -336,7 +336,6 @@ main::-webkit-scrollbar-thumb {
 }
 
 .cards-retangulo { /* Retangulo colorido para os cards */
-    background-color: #6688FF;
     color: #6688FF;
     border-radius:15px 0px 0px 15px;
     border: none;
