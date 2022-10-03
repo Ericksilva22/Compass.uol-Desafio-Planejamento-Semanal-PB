@@ -1,7 +1,7 @@
 # Compass.uol-Desafio-Planejamento-Semanal-PB
 Sprint 3 - 3° desafio Front-End para o programa de bolsas da Compass.uol
 
-O Projeto corresponde a uma página que permite o usuário inserir seu plano de atividades durante a semana. O desing a ser seguido foi cconstruído através do seguinte link: https://www.figma.com/file/bFCO644LzxRZTqyGSLcgzI/Planejamento-Semana?node-id=103%3A42
+O Projeto corresponde a uma página que permite o usuário inserir seu plano de atividades durante a semana. O desing a ser seguido foi construído através do seguinte link: https://www.figma.com/file/bFCO644LzxRZTqyGSLcgzI/Planejamento-Semana?node-id=103%3A42
 
 
 👀 Critérios de avaliação:
@@ -26,6 +26,6 @@ O Projeto corresponde a uma página que permite o usuário inserir seu plano de 
 * Fonte Nunito: Nunito - Google Fonts
 * Fonte Poppins: Poppins - Google Fonts
  
-Imagem do projeto:
+:point_down: Imagem do projeto:
 
 <img src="/img/Home.png" alt="Layout para o projeto desenvolvido">
