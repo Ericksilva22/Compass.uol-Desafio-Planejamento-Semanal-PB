@@ -159,8 +159,11 @@ main::-webkit-scrollbar-thumb {
     height: 44px;
     border: 1px solid #2CBE82;
     border-radius: 10px;
+    text-align: center;
     color: #3B3E45;
-    padding:10px 10px;
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 

@@ -42,7 +42,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards_hora.classList.add("cor_horario-segunda"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
-        horarioDigitado.innerText = Hora; //inserindo o horario para a  atividade digitada 
+        horarioDigitado.innerText = Hora.replace(":", "h").concat("m"); //inserindo o horario para a  atividade digitada de acordo com o padrao(xxhxxm)
+      
         
         div_cards_hora.appendChild(horarioDigitado);
         
@@ -91,7 +92,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards_hora.classList.add("cor_horario-terca"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
-        horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
+        horarioDigitado.innerText = Hora.replace(":", "h").concat("m");
         div_cards_hora.appendChild(horarioDigitado);
         
         
@@ -138,7 +139,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards_hora.classList.add("cor_horario-quarta"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
-        horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
+        horarioDigitado.innerText = Hora.replace(":", "h").concat("m");
         div_cards_hora.appendChild(horarioDigitado);
         
         
@@ -185,7 +186,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards_hora.classList.add("cor_horario-quinta"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
-        horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
+        horarioDigitado.innerText = Hora.replace(":", "h").concat("m"); 
         div_cards_hora.appendChild(horarioDigitado);
         
         
@@ -232,7 +233,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards_hora.classList.add("cor_horario-sexta"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
-        horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
+        horarioDigitado.innerText = Hora.replace(":", "h").concat("m"); 
         div_cards_hora.appendChild(horarioDigitado);
         
         
@@ -279,7 +280,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards_hora.classList.add("cor_horario-sabado"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
-        horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
+        horarioDigitado.innerText = Hora.replace(":", "h").concat("m"); 
         div_cards_hora.appendChild(horarioDigitado);
         
         
@@ -326,7 +327,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_cards_hora.classList.add("cor_horario-domingo"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
-        horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
+        horarioDigitado.innerText = Hora.replace(":", "h").concat("m"); 
         div_cards_hora.appendChild(horarioDigitado);
         
         
@@ -393,14 +394,26 @@ botaoAdicionarAtividade.addEventListener("click", (envio) =>{ //evento de click 
     //alertar visualmente a necessidade do usuário o preenchimento dos dados
      if(conteudoDia == false){ 
         dia.style.background = "#FF6666";
+        dia.style.borderColor = "#FF6666";
     } else {
         dia.style.background = "#FFFFFF";
+        dia.style.borderColor = "#2CBE82";
     }
 
     if(conteudoEntrada == false){ 
         entrada.style.background = "#FF6666";
+        entrada.style.borderColor = "#FF6666";
     } else {
         entrada.style.background = "#FFFFFF";
+        entrada.style.borderColor = "#2CBE82";
+    }
+
+    if(conteudoHora == false){ 
+        horario.style.background = "#FF6666";
+        horario.style.borderColor = "#FF6666";
+    } else {
+        horario.style.background = "#FFFFFF";
+        horario.style.borderColor = "#2CBE82";
     }
 
 })
