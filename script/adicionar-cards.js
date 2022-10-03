@@ -4,6 +4,11 @@
 const formulario = document.querySelector('#formulario_geral');
 const entrada = document.querySelector('#formulario_entrada');
 const horario = document.querySelector('#dias-semana-horario');
+
+const paragrafo_erro_atividade = document.querySelector('#paragrafo-erro-atividade');
+const paragrafo_erro_dia = document.querySelector('#paragrafo-erro-dia');
+const paragrafo_erro_horario = document.querySelector('#paragrafo-erro-horario');
+
 const dia = document.querySelector('#dias-semana');
 const botaoAdicionarAtividade = document.querySelector('.formulario_botaoAdicionar');
 const secao_horario = document.querySelector('.secao_horario');
@@ -395,25 +400,32 @@ botaoAdicionarAtividade.addEventListener("click", (envio) =>{ //evento de click 
      if(conteudoDia == false){ 
         dia.style.background = "#FF6666";
         dia.style.borderColor = "#FF6666";
+        paragrafo_erro_dia.style.visibility = "visible"; 
+        
     } else {
         dia.style.background = "#FFFFFF";
         dia.style.borderColor = "#2CBE82";
+        paragrafo_erro_dia.style.visibility = "hidden"; 
     }
 
     if(conteudoEntrada == false){ 
         entrada.style.background = "#FF6666";
         entrada.style.borderColor = "#FF6666";
+        paragrafo_erro_atividade.style.visibility = "visible"; 
     } else {
         entrada.style.background = "#FFFFFF";
         entrada.style.borderColor = "#2CBE82";
+        paragrafo_erro_atividade.style.visibility = "hidden"; 
     }
 
     if(conteudoHora == false){ 
         horario.style.background = "#FF6666";
         horario.style.borderColor = "#FF6666";
+        paragrafo_erro_horario.style.visibility = "visible"; 
     } else {
         horario.style.background = "#FFFFFF";
         horario.style.borderColor = "#2CBE82";
+        paragrafo_erro_horario.style.visibility = "hidden"; 
     }
 
 })

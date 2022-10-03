@@ -137,6 +137,25 @@ main::-webkit-scrollbar-thumb {
     padding: 2rem;  
 }
 
+.atividade-erro{
+   margin-top: 1.2rem;
+}
+
+.dia-erro{
+    margin-top: 1.1rem;
+}
+
+.horario-erro{
+    margin-top: 1.1rem;
+}
+
+.paragrafo-erro{
+    font-size: 0.625rem;
+    margin-top: 0.4rem;
+    margin-left: 0.4rem;
+    visibility:hidden;
+}
+
 .formulario_atividade {
     border: 1px solid #2CBE82;
     border-radius: 10px;
@@ -347,7 +366,7 @@ main::-webkit-scrollbar-thumb {
 
 .cronograma_atividades {
     display: none;
-    flex-direction: column;
+    flex-direction: column;  
 }
 
 .detalhamento_atividades {

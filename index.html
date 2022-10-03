@@ -40,18 +40,28 @@
     </header>
     <main>
         <form class="formulario" id="formulario_geral">
-            <input class="formulario_atividade" id="formulario_entrada" type="text" placeholder="Atividade">
-            <select class="formulario_dias" id="dias-semana">
-                <option selected disabled value="">Dia da Semana</option>
-                <option value="1">Segunda-Feira</option>
-                <option value="2">Terça-Feira</option>
-                <option value="3">Quarta-Feira</option>
-                <option value="4">Quinta-Feira</option>
-                <option value="5">Sexta-Feira</option>
-                <option value="6">Sabado</option>
-                <option value="7">Domingo</option>
-            </select>
-            <input type="time" class="formulario_horario" id="dias-semana-horario" value="00:12">
+            <div class="atividade-erro">
+                <input class="formulario_atividade" id="formulario_entrada" type="text" placeholder="Atividade">
+                <p class="paragrafo-erro" id="paragrafo-erro-atividade">*Insira sua atividade!</p>
+            </div>
+            
+            <div class="dia-erro">
+                <select class="formulario_dias" id="dias-semana">
+                    <option selected disabled value="">Dia da Semana</option>
+                    <option value="1">Segunda-Feira</option>
+                    <option value="2">Terça-Feira</option>
+                    <option value="3">Quarta-Feira</option>
+                    <option value="4">Quinta-Feira</option>
+                    <option value="5">Sexta-Feira</option>
+                    <option value="6">Sabado</option>
+                    <option value="7">Domingo</option>
+                </select>
+                <p class="paragrafo-erro" id="paragrafo-erro-dia">*selecione o dia!</p>
+            </div>
+            <div class="horario-erro">
+                <input type="time" class="formulario_horario" id="dias-semana-horario" value="00:12">
+                <p class="paragrafo-erro" id="paragrafo-erro-horario">*Insira o horário!</p>
+            </div>
             <button class="formulario_botaoAdicionar botao"><img src="/img/Shape+.svg" alt=""> Adicionar Atividade</button>
             <button class="formulario_botaoExcluir botao"><img src="/img/Shape-.svg" alt=""> Excluir Todos</button>
         </form>
