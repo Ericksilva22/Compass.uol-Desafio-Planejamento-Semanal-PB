@@ -48,11 +48,11 @@ main::-webkit-scrollbar-thumb {
 }
 
 .cabecalho_titulos{
-    height: 52px;
-    width: 581px;
+    height: 3.25rem;
+    width: 36.313rem;
     background-color: #6688FF;
     border-radius: 0px 14px 15px 0px;
-    padding: 12px 0px 12px 24px;
+    padding: 0.75rem 0px 0.75rem 1.5rem;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -61,12 +61,12 @@ main::-webkit-scrollbar-thumb {
 }
 
 .cabecalho_titulos h1 {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
 }
 
 .cabecalho_titulos p {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
 }
 
@@ -81,9 +81,9 @@ main::-webkit-scrollbar-thumb {
 .botao-local-salvar { 
     background-color:#2CBE82;
     color: #FFFFFF;
-    font-size: 17px;
+    font-size: 1.063rem;
     font-weight: 400;
-    height: 40px;
+    height: 2.5rem;
     border-radius: 10px;
     padding: 1rem;
     cursor: pointer;
@@ -97,9 +97,9 @@ main::-webkit-scrollbar-thumb {
 .botao-local-excluir { 
     background-color: #DA2B40;
     color: #FFFFFF;
-    font-size: 17px;
+    font-size: 1.063rem;
     font-weight: 400;
-    height: 40px;
+    height: 2.5rem;
     border-radius: 10px;
     padding: 1rem;
     cursor: pointer;
@@ -116,7 +116,7 @@ main::-webkit-scrollbar-thumb {
 
 .relogio-atualizado {
     font-weight: 400;
-    font-size: 40px;
+    font-size: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,7 +125,7 @@ main::-webkit-scrollbar-thumb {
 
 .data-atualizada {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /* formulário */
@@ -140,41 +140,41 @@ main::-webkit-scrollbar-thumb {
 .formulario_atividade {
     border: 1px solid #2CBE82;
     border-radius: 10px;
-    width: 424px;
-    height: 44px;
+    width: 26.5rem;
+    height: 2.75rem;
     padding-left: 2rem;
 }
 
 .formulario_dias {
-    width: 210px;
-    height: 44px;
+    width: 13.125rem;
+    height: 2.75rem;
     border: 1px solid #2CBE82;
     border-radius: 10px;
-    padding: 10px 82px 10px 12px;
+    padding: 0.625rem 5.125rem 0.625rem 0.75rem;
     color: #3B3E45;
 }
 
 .formulario_horario {
-    width: 102px;
-    height: 44px;
+    width: 6.375rem;
+    height: 2.75rem;
     border: 1px solid #2CBE82;
     border-radius: 10px;
     text-align: center;
     color: #3B3E45;
     font-family: Nunito;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
 }
 
 
 .formulario_botaoAdicionar{
-    width: 222px;
-    height: 44px;
-    padding: 10px 12px;
+    width: 13.875rem;
+    height: 2.75rem;
+    padding: 0.625rem 0.75rem;
     color: #FFFFFF;
     background: #2CBE82;
     border-radius: 10px;
-    font-size: 17px;
+    font-size: 1.063rem;
     font-weight: 400;
     cursor: pointer;
     transition: all 400ms ease-in-out;
@@ -183,13 +183,13 @@ main::-webkit-scrollbar-thumb {
 
 
 .formulario_botaoExcluir{
-    width: 184px;
-    height: 44px;
-    padding: 10px 12px;
+    width: 11.5rem;
+    height: 2.75rem;
+    padding: 0.625rem 0.75rem;
     color: #FFFFFF;
     background: #DA2B40;
     border-radius: 10px;
-    font-size: 17px;
+    font-size: 1.063rem;
     font-weight: 400;
     cursor: pointer;
     transition: all 400ms ease-in-out;
@@ -222,12 +222,12 @@ main::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85px;
-    height: 85px;
+    width: 5.313rem;
+    height: 5.313rem;
     box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
     border-radius: 10px;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1.063rem;
     color: #3B3E45;
     margin: 0 1rem 0.5rem 1rem;
     font-family: 'Nunito', sans-serif;
@@ -297,12 +297,12 @@ main::-webkit-scrollbar-thumb {
 }
 
 .cards-semana ul li {
-    width: 150px;
-    height: 33px;
+    width: 9.375rem;
+    height: 2.063rem;
     box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
     border-radius: 9px 9px 0px 0px;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 1.063rem;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -312,7 +312,7 @@ main::-webkit-scrollbar-thumb {
 }
 
 .cards-semana ul li:hover{
-    width: 190px;
+    width: 11.875rem;
 }
 
 .cards-semana ul li:nth-child(1), .retangulo-segunda { 
@@ -359,8 +359,8 @@ main::-webkit-scrollbar-thumb {
 .cards-atividades{
     display: flex;
     justify-content: space-between;
-    width: 512px;
-    height: 85px;
+    width: 32rem;
+    height: 5.313rem;
     background: linear-gradient(112.83deg, rgba(228, 240, 248, 0.42) 0%, rgba(255, 255, 255, 0.336) 110.84%);
     border: 1px solid #FFFFFF;
     box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
@@ -373,15 +373,15 @@ main::-webkit-scrollbar-thumb {
     color: #6688FF;
     border-radius:15px 0px 0px 15px;
     border: none;
-    width: 14px;
-    height: 85px;
+    width: 0.875rem;
+    height: 5.313rem;
     display: flex;
     align-items: center;
 }
 
 .cards-atividades-paragrafo {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 1rem;
 }
 
@@ -389,8 +389,8 @@ main::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 57px;
-    height: 25px;
+    width: 3.563rem;
+    height: 1.563rem;
     background: #98031E;
     color: #FFFFFF;
     border: none;
@@ -398,7 +398,7 @@ main::-webkit-scrollbar-thumb {
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-top: 1rem;
     margin-right: 0.2rem;
     cursor: pointer;
@@ -406,6 +406,6 @@ main::-webkit-scrollbar-thumb {
 }
 
 .cards-atividades-botao:hover{
-    width: 60px;
-    height: 27px;
+    width: 3.75rem;
+    height: 1.688rem;
 }
