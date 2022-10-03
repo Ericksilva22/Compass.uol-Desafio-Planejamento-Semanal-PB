@@ -387,7 +387,22 @@ botaoAdicionarAtividade.addEventListener("click", (envio) =>{ //evento de click 
         ordenarCardsSexta();
         ordenarCardsSabado();
         ordenarCardsDomingo();
+    } else {
+        alert('Preencha o(s) campo(s) destacado(s) em vermelho'); //mensagem de erro
+    } 
+    //alertar visualmente a necessidade do usuário o preenchimento dos dados
+     if(conteudoDia == false){ 
+        dia.style.background = "#FF6666";
+    } else {
+        dia.style.background = "#FFFFFF";
     }
+
+    if(conteudoEntrada == false){ 
+        entrada.style.background = "#FF6666";
+    } else {
+        entrada.style.background = "#FFFFFF";
+    }
+
 })
 
 function adicionarLocalStorage(){
