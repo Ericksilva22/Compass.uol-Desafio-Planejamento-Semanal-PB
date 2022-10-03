@@ -1,5 +1,3 @@
-
-
 //Criando variáveis
 const formulario = document.querySelector('#formulario_geral');
 const entrada = document.querySelector('#formulario_entrada');
@@ -21,7 +19,6 @@ const conteudo_sexta = document.querySelector('#conteudo-sexta');
 const conteudo_sabado = document.querySelector('#conteudo-sabado');
 const conteudo_domingo = document.querySelector('#conteudo-domingo');
 
-//vetor para comparar os valores do horario dos cards inserido
 /*let vetorHora_Segunda = [];*/
 
 //funções
@@ -31,16 +28,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
 
     if(diaSemana == 1){//executando ao selecionar segunda-feira
         
-        /*
-        Casos de cards com horarios iguais
-        for(let i = 0; i < vetorHora_Segunda.length; i++){
-            if(conteudo_segunda.childElementCount > 0 && Hora == vetorHora_Segunda[i]){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-                alert('horario existe');
-            }
-        }
-        vetorHora_Segunda.push(Hora); //armazenando valor de entrada no vetor correspondente
-        */
-        
+      
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
         div_cards_hora.classList.add("bloco_horario");
@@ -80,7 +68,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
-
+    
         //inserindo a div cards-atividade dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards);
 
@@ -602,6 +590,29 @@ function ordenarCardsDomingo(){
 }
 
 
+/*
+function CardsCriadosIguais(z,x,w) {
 
+    //vetor para comparar os valores do horario dos cards inserido
+    
+    vetorHora_Segunda.push(z); //armazenando valor de entrada no vetor correspondent
 
+    //Casos de cards com horarios iguais
+/*
+    // Selecionando as divs criadas para segunda-feira
+    var divsCriadas = document.querySelectorAll('#conteudo-segunda .detalhamento_atividades');
 
+     //criando um vetor com as divs criadas para os cards
+    var ordem = [].map.call(divsCriadas, function(elemento) {
+        return elemento;
+    });
+
+    for(let i = 0; i < vetorHora_Segunda.length-1; i++){
+        if(conteudo_segunda.childElementCount > 0 && z == vetorHora_Segunda[i]){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
+            vetorHora_Segunda[i].closest('#conteudo-segunda .detalhamento_atividades').appendChild(x);
+            vetorHora_Segunda[i].closest('#conteudo-segunda .detalhamento_atividades').appendChild(w);
+            break;  
+        } 
+    }
+}
+*/
