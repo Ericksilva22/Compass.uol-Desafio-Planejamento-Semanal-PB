@@ -440,7 +440,7 @@ function ordenarCardsSegunda(){
     ordem.sort(function(primeiro,segundo) {
         var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
         var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return primeiro - segundo;
+        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
     });
 
     // Ordenando os cards na tela
@@ -464,7 +464,7 @@ function ordenarCardsTerca(){
     ordem.sort(function(primeiro,segundo) {
         var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
         var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return primeiro - segundo;
+        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
     });
 
     // Ordenando os cards na tela
@@ -487,7 +487,7 @@ function ordenarCardsQuarta(){
     ordem.sort(function(primeiro,segundo) {
         var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
         var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return primeiro - segundo;
+        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
     });
 
     // Ordenando os cards na tela
@@ -510,7 +510,7 @@ function ordenarCardsQuinta(){
     ordem.sort(function(primeiro,segundo) {
         var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
         var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return primeiro - segundo;
+        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
     });
 
     // Ordenando os cards na tela
@@ -533,7 +533,7 @@ function ordenarCardsSexta(){
     ordem.sort(function(primeiro,segundo) {
         var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
         var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return primeiro - segundo;
+        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
     });
 
     // Ordenando os cards na tela
@@ -556,7 +556,7 @@ function ordenarCardsSabado(){
     ordem.sort(function(primeiro,segundo) {
         var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
         var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return primeiro - segundo;
+        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
     });
 
     // Ordenando os cards na tela
@@ -579,7 +579,7 @@ function ordenarCardsDomingo(){
     ordem.sort(function(primeiro,segundo) {
         var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
         var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return primeiro - segundo;
+        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
     });
 
     // Ordenando os cards na tela
