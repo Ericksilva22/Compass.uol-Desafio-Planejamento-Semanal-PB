@@ -38,7 +38,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
-        div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+        div_cards_hora.classList.add("bloco_horario");
+        div_cards_hora.classList.add("cor_horario-segunda"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
         horarioDigitado.innerText = Hora; //inserindo o horario para a  atividade digitada 
@@ -87,6 +88,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
         div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+        div_cards_hora.classList.add("cor_horario-terca"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
         horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
@@ -133,6 +135,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
         div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+        div_cards_hora.classList.add("cor_horario-quarta"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
         horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
@@ -179,6 +182,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
         div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+        div_cards_hora.classList.add("cor_horario-quinta"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
         horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
@@ -225,6 +229,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
         div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+        div_cards_hora.classList.add("cor_horario-sexta"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
         horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
@@ -271,6 +276,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
         div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+        div_cards_hora.classList.add("cor_horario-sabado"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
         horarioDigitado.innerText = Hora; //inserindo a atividade digitada 
@@ -317,6 +323,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
         div_cards_hora.classList.add("bloco_horario"); //adicionando a classe para inserir a estilização correta
+        div_cards_hora.classList.add("cor_horario-domingo"); //adicionando a classe para inserir a cor do bloco
 
         const horarioDigitado = document.createElement("p");
         horarioDigitado.innerText = Hora; //inserindo a atividade digitada 

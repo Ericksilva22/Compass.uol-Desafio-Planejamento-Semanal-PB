@@ -227,7 +227,38 @@ main::-webkit-scrollbar-thumb {
     font-size: 17px;
     color: #3B3E45;
     margin: 0 1rem 0.5rem 1rem;
+    font-family: 'Nunito', sans-serif;
+    border-bottom: 1px solid #DCDFE3;
 }
+
+.cor_horario-segunda{
+    background: rgba(255, 162, 70, 0.4);
+}
+
+.cor_horario-terca{
+    background: rgba(53, 255, 133, 0.4);
+}
+
+.cor_horario-quarta{
+    background: rgba(102, 136, 255, 0.4);
+}
+
+.cor_horario-quinta{
+    background: rgba(179, 102, 255, 0.4);
+}
+
+.cor_horario-sexta{
+    background: rgba(102, 209, 255, 0.4);
+}
+
+.cor_horario-sabado{
+    background: rgba(255, 102, 212, 0.4);
+}
+
+.cor_horario-domingo{
+    background: rgba(255, 102, 102, 0.4);
+}
+
 
 .secao_semana {
     margin:0 1rem 2rem 0;
