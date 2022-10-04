@@ -19,10 +19,6 @@ const conteudo_sexta = document.querySelector('#conteudo-sexta');
 const conteudo_sabado = document.querySelector('#conteudo-sabado');
 const conteudo_domingo = document.querySelector('#conteudo-domingo');
 
-/*let vetorHora_Segunda = [];*/
-
-
-
 //funções
 
 // função para criar os cards a partir do conteudo digitado pelo usuario no formulário
@@ -71,14 +67,18 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-segunda"); //usada futuramente para excluir todos os cardspara segunda no arquivo remover-cards.js
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido); //setando valor do horario na div para auxiliar na função de ordenar os cards
 
-        //inserindo a div bloco_horario dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards_hora);
-    
-        //inserindo a div cards-atividade dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards);
+        const verificacao = CardsCriadosIguais_segunda(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
 
-        // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
-        conteudo_segunda.appendChild(div_detalhamento);
+        if(verificacao == 0) { // criar atividades uma em baixo da outra
+            //inserindo a div bloco_horario dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards_hora);
+        
+            //inserindo a div cards-atividade dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards);
+
+            // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+            conteudo_segunda.appendChild(div_detalhamento);
+        }
 
         entrada.value = ""; //limpando o conteudo digitado no input text
 
@@ -119,16 +119,21 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-terca");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        //inserindo a div bloco_horario dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards_hora);
+        const verificacao_terca = CardsCriadosIguais_terca(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
+       
+        if(verificacao_terca == 0) { // criar atividades uma em baixo da outra
+            //inserindo a div bloco_horario dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards_hora);
+        
+            //inserindo a div cards-atividade dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards);
 
-        //inserindo a div cards-atividade dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards);
-
-        // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
-        conteudo_terca.appendChild(div_detalhamento);
+            // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+            conteudo_terca.appendChild(div_detalhamento);
+        }
 
         entrada.value = ""; //limpando o conteudo digitado no input text
+
     } else if(diaSemana == 3){ //para Quarta-feira
 
         //Criando estrutura HTML - div bloco_horario
@@ -166,16 +171,21 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-quarta");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        //inserindo a div bloco_horario dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards_hora);
+        const verificacao = CardsCriadosIguais_quarta(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
 
-        //inserindo a div cards-atividade dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards);
+        if(verificacao == 0) { // criar atividades uma em baixo da outra
+            //inserindo a div bloco_horario dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards_hora);
+        
+            //inserindo a div cards-atividade dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards);
 
-        // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
-        conteudo_quarta.appendChild(div_detalhamento);
+            // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+            conteudo_quarta.appendChild(div_detalhamento);
+        }
 
         entrada.value = ""; //limpando o conteudo digitado no input text
+
     } else if(diaSemana == 4){ //para Quinta-feira
 
         //Criando estrutura HTML - div bloco_horario
@@ -213,16 +223,21 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-quinta");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        //inserindo a div bloco_horario dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards_hora);
+        const verificacao = CardsCriadosIguais_quinta(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
 
-        //inserindo a div cards-atividade dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards);
+        if(verificacao == 0) { // criar atividades uma em baixo da outra
+            //inserindo a div bloco_horario dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards_hora);
+        
+            //inserindo a div cards-atividade dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards);
 
-        // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
-        conteudo_quinta.appendChild(div_detalhamento);
+            // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+            conteudo_quinta.appendChild(div_detalhamento);
+        }
 
         entrada.value = ""; //limpando o conteudo digitado no input text
+
     } else if(diaSemana == 5){ //para sexta-feira
 
         //Criando estrutura HTML - div bloco_horario
@@ -260,14 +275,18 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-sexta");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        //inserindo a div bloco_horario dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards_hora);
+        const verificacao = CardsCriadosIguais_sexta(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
 
-        //inserindo a div cards-atividade dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards);
+        if(verificacao == 0) { // criar atividades uma em baixo da outra
+            //inserindo a div bloco_horario dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards_hora);
+        
+            //inserindo a div cards-atividade dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards);
 
-        // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
-        conteudo_sexta.appendChild(div_detalhamento);
+            // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+            conteudo_sexta.appendChild(div_detalhamento);
+        }
 
         entrada.value = ""; //limpando o conteudo digitado no input text
     }  else if(diaSemana == 6){ //para sabado
@@ -310,16 +329,21 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
         
 
-        //inserindo a div bloco_horario dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards_hora);
+        const verificacao = CardsCriadosIguais_sabado(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
 
-        //inserindo a div cards-atividade dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards);
+        if(verificacao == 0) { // criar atividades uma em baixo da outra
+            //inserindo a div bloco_horario dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards_hora);
+        
+            //inserindo a div cards-atividade dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards);
 
-        // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
-        conteudo_sabado.appendChild(div_detalhamento);
+            // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+            conteudo_sabado.appendChild(div_detalhamento);
+        }
 
         entrada.value = ""; //limpando o conteudo digitado no input text
+
     } else if(diaSemana == 7){ //para domingo
 
         //Criando estrutura HTML - div bloco_horario
@@ -357,14 +381,18 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-domingo");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        //inserindo a div bloco_horario dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards_hora);
+        const verificacao = CardsCriadosIguais_domingo(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
 
-        //inserindo a div cards-atividade dentro da div detalhamento_atividades
-        div_detalhamento.appendChild(div_cards);
+        if(verificacao == 0) { // criar atividades uma em baixo da outra
+            //inserindo a div bloco_horario dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards_hora);
+        
+            //inserindo a div cards-atividade dentro da div detalhamento_atividades
+            div_detalhamento.appendChild(div_cards);
 
-        // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
-        conteudo_domingo.appendChild(div_detalhamento);
+            // inserindo a div detalhamento_atividades dentro da div cronograma_atividades
+            conteudo_domingo.appendChild(div_detalhamento);
+        }
 
         entrada.value = ""; //limpando o conteudo digitado no input text
     }
@@ -604,30 +632,9 @@ function converter(h){
     return juncao;
 }
 
-/*
-function CardsCriadosIguais(z,x,w) {
 
-    //vetor para comparar os valores do horario dos cards inserido
-    
-    vetorHora_Segunda.push(z); //armazenando valor de entrada no vetor correspondent
 
-    //Casos de cards com horarios iguais
-/*
-    // Selecionando as divs criadas para segunda-feira
-    var divsCriadas = document.querySelectorAll('#conteudo-segunda .detalhamento_atividades');
 
-     //criando um vetor com as divs criadas para os cards
-    var ordem = [].map.call(divsCriadas, function(elemento) {
-        return elemento;
-    });
 
-    for(let i = 0; i < vetorHora_Segunda.length-1; i++){
-        if(conteudo_segunda.childElementCount > 0 && z == vetorHora_Segunda[i]){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-            vetorHora_Segunda[i].closest('#conteudo-segunda .detalhamento_atividades').appendChild(x);
-            vetorHora_Segunda[i].closest('#conteudo-segunda .detalhamento_atividades').appendChild(w);
-            break;  
-        } 
-    }
-}
-*/
+
 

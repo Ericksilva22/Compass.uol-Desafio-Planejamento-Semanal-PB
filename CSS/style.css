@@ -431,3 +431,26 @@ main::-webkit-scrollbar-thumb {
     width: 3.75rem;
     height: 1.688rem;
 }
+
+/* Criando estilo para cards com o mesmo horário */
+.mesmo-horario::after{
+    content: '';
+    width: 97%;
+    background-color: #FF6D6D;
+    height: 4px;
+    position: absolute;
+    top: 2.5rem;
+    left: 2rem;
+}
+
+.mesmo-horario::before{
+    content: '';
+    width: 1.334rem;
+    background-color: #FF6D6D;
+    height: 1.122rem;
+    position: absolute;
+    left: 1.32%;
+    right: 97.2%;
+    top: 35.27%;
+    border-radius: 50%;
+}
