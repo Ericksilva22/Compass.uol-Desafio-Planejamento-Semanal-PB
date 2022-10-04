@@ -5,17 +5,41 @@ document.addEventListener("click", (selecao) =>{
     const elementoSelecionado = selecao.target;
     const elementoPai = elementoSelecionado.closest(".detalhamento_atividades");
 
-    const cardsCriados = document.querySelectorAll('.cards-atividades');
-
     //excluindo card selecionado
     if(elementoSelecionado.classList.contains("cards-atividades-botao")) {
         if(elementoPai.childElementCount == 2){ 
             elementoPai.remove();
-            
-        } else if (elementoPai.childElementCount > 2) {
+
+        } else if (elementoPai.childElementCount > 2) { // quando existe mais de um card fazer a exclusão apenas do card selecionado
             elementoSelecionado.parentElement.remove();
-            if(elementoPai.childElementCount == 2){
-                elementoPai.classList.remove("mesmo-horario");
+            if(elementoPai.childElementCount == 2){ // quando existe apenas um card com seu respectivo horário
+                elementoPai.classList.remove("mesmo-horario"); // removendo a linha na tela
+                var horarioMudar = elementoPai.firstChild; //selecionando o bloco do horário
+
+                //adicionando a cor padrão para o bloco da semana do dia da semana selecionado
+                if(elementoPai.classList.contains("cards-segunda")){
+                    horarioMudar.classList.remove("cor_horario-mesmo-horario");
+                    horarioMudar.classList.add("cor_horario-segunda");
+                } else if(elementoPai.classList.contains("cards-terca")){
+                    horarioMudar.classList.remove("cor_horario-mesmo-horario");
+                    horarioMudar.classList.add("cor_horario-terca");
+                } else if(elementoPai.classList.contains("cards-quarta")){
+                    horarioMudar.classList.remove("cor_horario-mesmo-horario");
+                    horarioMudar.classList.add("cor_horario-quarta");
+                } else if(elementoPai.classList.contains("cards-quinta")){
+                    horarioMudar.classList.remove("cor_horario-mesmo-horario");
+                    horarioMudar.classList.add("cor_horario-quinta");
+                } else if(elementoPai.classList.contains("cards-sexta")){
+                    horarioMudar.classList.remove("cor_horario-mesmo-horario");
+                    horarioMudar.classList.add("cor_horario-sexta");
+                } else if(elementoPai.classList.contains("cards-sabado")){
+                    horarioMudar.classList.remove("cor_horario-mesmo-horario");
+                    horarioMudar.classList.add("cor_horario-sabado");
+                } else if(elementoPai.classList.contains("cards-domingo")){
+                    horarioMudar.classList.remove("cor_horario-mesmo-horario");
+                    horarioMudar.classList.add("cor_horario-domingo");
+                }
+                
             }
         }
         

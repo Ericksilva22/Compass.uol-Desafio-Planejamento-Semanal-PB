@@ -68,7 +68,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-segunda"); //usada futuramente para excluir todos os cardspara segunda no arquivo remover-cards.js
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido); //setando valor do horario na div para auxiliar na função de ordenar os cards
 
-        const verificacao = CardsCriadosIguais_segunda(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
+        const verificacao = CardsCriadosIguais_segunda(valor_hr_convertido,div_cards); // criar atividades iguais lado a lado
 
         if(verificacao == 0) { // criar atividades uma em baixo da outra
             //inserindo a div bloco_horario dentro da div detalhamento_atividades
@@ -120,7 +120,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-terca");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        const verificacao_terca = CardsCriadosIguais_terca(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
+        const verificacao_terca = CardsCriadosIguais_terca(valor_hr_convertido,div_cards); // criar atividades iguais lado a lado
        
         if(verificacao_terca == 0) { // criar atividades uma em baixo da outra
             //inserindo a div bloco_horario dentro da div detalhamento_atividades
@@ -172,7 +172,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-quarta");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        const verificacao = CardsCriadosIguais_quarta(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
+        const verificacao = CardsCriadosIguais_quarta(valor_hr_convertido,div_cards); // criar atividades iguais lado a lado
 
         if(verificacao == 0) { // criar atividades uma em baixo da outra
             //inserindo a div bloco_horario dentro da div detalhamento_atividades
@@ -224,7 +224,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-quinta");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        const verificacao = CardsCriadosIguais_quinta(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
+        const verificacao = CardsCriadosIguais_quinta(valor_hr_convertido,div_cards); // criar atividades iguais lado a lado
 
         if(verificacao == 0) { // criar atividades uma em baixo da outra
             //inserindo a div bloco_horario dentro da div detalhamento_atividades
@@ -276,7 +276,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-sexta");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        const verificacao = CardsCriadosIguais_sexta(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
+        const verificacao = CardsCriadosIguais_sexta(valor_hr_convertido,div_cards); // criar atividades iguais lado a lado
 
         if(verificacao == 0) { // criar atividades uma em baixo da outra
             //inserindo a div bloco_horario dentro da div detalhamento_atividades
@@ -330,7 +330,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
         
 
-        const verificacao = CardsCriadosIguais_sabado(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
+        const verificacao = CardsCriadosIguais_sabado(valor_hr_convertido,div_cards); // criar atividades iguais lado a lado
 
         if(verificacao == 0) { // criar atividades uma em baixo da outra
             //inserindo a div bloco_horario dentro da div detalhamento_atividades
@@ -382,7 +382,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         div_detalhamento.classList.add("cards-domingo");
         div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
-        const verificacao = CardsCriadosIguais_domingo(valor_hr_convertido,div_cards_hora,div_cards); // criar atividades iguais lado a lado
+        const verificacao = CardsCriadosIguais_domingo(valor_hr_convertido,div_cards); // criar atividades iguais lado a lado
 
         if(verificacao == 0) { // criar atividades uma em baixo da outra
             //inserindo a div bloco_horario dentro da div detalhamento_atividades
