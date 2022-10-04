@@ -34,7 +34,7 @@ botaoExcluirTodos.addEventListener("click", (envio) =>{
         }
     } else if (conteudo_quinta.style.display == "flex") { 
         while(conteudo_quinta.childElementCount != 0){
-            document.querySelector(".cards-quainta").outerHTML = ""; 
+            document.querySelector(".cards-quinta").outerHTML = ""; 
         }
     } else if (conteudo_sexta.style.display == "flex") { 
         while(conteudo_sexta.childElementCount != 0){

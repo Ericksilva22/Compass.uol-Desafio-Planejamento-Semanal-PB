@@ -21,10 +21,15 @@ const conteudo_domingo = document.querySelector('#conteudo-domingo');
 
 /*let vetorHora_Segunda = [];*/
 
+
+
 //funções
 
 // função para criar os cards a partir do conteudo digitado pelo usuario no formulário
 const salvandoAtividade = (texto, diaSemana, Hora) => {
+
+    //Chamando função para converter hora
+    const valor_hr_convertido = converter(Hora);
 
     if(diaSemana == 1){//executando ao selecionar segunda-feira
         
@@ -64,7 +69,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-segunda"); //usada futuramente para excluir todos os cardspara segunda no arquivo remover-cards.js
-        div_detalhamento.setAttribute("hora_atividade", Hora); //setando valor do horario na div para auxiliar na função de ordenar os cards
+        div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido); //setando valor do horario na div para auxiliar na função de ordenar os cards
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -112,7 +117,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-terca");
-        div_detalhamento.setAttribute("hora_atividade", Hora);
+        div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -159,7 +164,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-quarta");
-        div_detalhamento.setAttribute("hora_atividade", Hora);
+        div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -206,7 +211,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-quinta");
-        div_detalhamento.setAttribute("hora_atividade", Hora);
+        div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -253,7 +258,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-sexta");
-        div_detalhamento.setAttribute("hora_atividade", Hora);
+        div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -300,7 +305,10 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-sabado");
-        div_detalhamento.setAttribute("hora_atividade", Hora);
+
+        
+        div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
+        
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -347,7 +355,7 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         const div_detalhamento = document.createElement("div");
         div_detalhamento.classList.add("detalhamento_atividades");
         div_detalhamento.classList.add("cards-domingo");
-        div_detalhamento.setAttribute("hora_atividade", Hora);
+        div_detalhamento.setAttribute("hora_atividade", valor_hr_convertido);
 
         //inserindo a div bloco_horario dentro da div detalhamento_atividades
         div_detalhamento.appendChild(div_cards_hora);
@@ -438,9 +446,9 @@ function ordenarCardsSegunda(){
 
     // Ordenando o vetor pelo atributo do horario de forma crescente
     ordem.sort(function(primeiro,segundo) {
-        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
-        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
+        var a = primeiro.getAttribute('hora_atividade'); //obtendo o número do atributo hora_atividade
+        var b = segundo.getAttribute('hora_atividade');
+        return b - a;
     });
 
     // Ordenando os cards na tela
@@ -462,9 +470,9 @@ function ordenarCardsTerca(){
 
     // Ordenando o vetor pelo atributo do horario de forma crescente
     ordem.sort(function(primeiro,segundo) {
-        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
-        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
+        var a = primeiro.getAttribute('hora_atividade'); //obtendo o número do atributo hora_atividade
+        var b = segundo.getAttribute('hora_atividade');
+        return b - a;
     });
 
     // Ordenando os cards na tela
@@ -485,9 +493,9 @@ function ordenarCardsQuarta(){
 
     // Ordenando o vetor pelo atributo do horario de forma crescente
     ordem.sort(function(primeiro,segundo) {
-        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
-        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
+        var a = primeiro.getAttribute('hora_atividade'); //obtendo o número do atributo hora_atividade
+        var b = segundo.getAttribute('hora_atividade');
+        return b - a;
     });
 
     // Ordenando os cards na tela
@@ -508,9 +516,9 @@ function ordenarCardsQuinta(){
 
     // Ordenando o vetor pelo atributo do horario de forma crescente
     ordem.sort(function(primeiro,segundo) {
-        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
-        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
+        var a = primeiro.getAttribute('hora_atividade'); //obtendo o número do atributo hora_atividade
+        var b = segundo.getAttribute('hora_atividade');
+        return b - a;
     });
 
     // Ordenando os cards na tela
@@ -531,9 +539,9 @@ function ordenarCardsSexta(){
 
     // Ordenando o vetor pelo atributo do horario de forma crescente
     ordem.sort(function(primeiro,segundo) {
-        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
-        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
+        var a = primeiro.getAttribute('hora_atividade'); //obtendo o número do atributo hora_atividade
+        var b = segundo.getAttribute('hora_atividade');
+        return b - a;
     });
 
     // Ordenando os cards na tela
@@ -554,9 +562,9 @@ function ordenarCardsSabado(){
 
     // Ordenando o vetor pelo atributo do horario de forma crescente
     ordem.sort(function(primeiro,segundo) {
-        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
-        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
+        var a = primeiro.getAttribute('hora_atividade'); //obtendo o número do atributo hora_atividade
+        var b = segundo.getAttribute('hora_atividade');
+        return b - a;
     });
 
     // Ordenando os cards na tela
@@ -577,9 +585,9 @@ function ordenarCardsDomingo(){
 
     // Ordenando o vetor pelo atributo do horario de forma crescente
     ordem.sort(function(primeiro,segundo) {
-        var primeiro = parseInt(primeiro.getAttribute('hora_atividade'), 10); //transformando valor do atributo em um numero inteiro
-        var segundo = parseInt(segundo.getAttribute('hora_atividade'), 10);
-        return segundo - primeiro; //lógica invertida devido a rotação do conteudo da div
+        var a = primeiro.getAttribute('hora_atividade'); //obtendo o número do atributo hora_atividade
+        var b = segundo.getAttribute('hora_atividade');
+        return b - a;
     });
 
     // Ordenando os cards na tela
@@ -589,6 +597,12 @@ function ordenarCardsDomingo(){
     }
 }
 
+// Converter valor de hora para um numero do tipo float
+function converter(h){
+    var separacao = h.split(":");
+    var juncao = parseFloat(separacao.join("."));
+    return juncao;
+}
 
 /*
 function CardsCriadosIguais(z,x,w) {
@@ -616,3 +630,4 @@ function CardsCriadosIguais(z,x,w) {
     }
 }
 */
+
