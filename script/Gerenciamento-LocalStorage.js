@@ -19,6 +19,14 @@ window.addEventListener('load', () => {
         for(let i = 0; i < items.length; i++){
             salvandoAtividade(items[i].atividade, items[i].DiaSelecionado, items[i].horaSelecionada);
         }
+        //ordenar os cards ao reiniciar a página
+        ordenarCardsSegunda(); 
+        ordenarCardsTerca();
+        ordenarCardsQuarta();
+        ordenarCardsQuinta();
+        ordenarCardsSexta();
+        ordenarCardsSabado();
+        ordenarCardsDomingo();
     }
 });
 
