@@ -33,7 +33,8 @@ const salvandoAtividade = (texto, diaSemana, Hora) => {
         //Criando estrutura HTML - div bloco_horario
         const div_cards_hora = document.createElement("div"); //criando div para o horario da atividade
         div_cards_hora.classList.add("bloco_horario");
-        div_cards_hora.classList.add("cor_horario-segunda"); //adicionando a classe para inserir a cor do bloco
+        div_cards_hora.classList.add("cor_horario-segunda"); 
+        
 
         const horarioDigitado = document.createElement("p");
         horarioDigitado.innerText = Hora.replace(":", "h").concat("m"); //inserindo o horario para a  atividade digitada de acordo com o padrao(xxhxxm)

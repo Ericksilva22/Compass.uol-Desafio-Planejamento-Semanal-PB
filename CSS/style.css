@@ -252,6 +252,7 @@ main::-webkit-scrollbar-thumb {
     border-bottom: 1px solid #DCDFE3;
 }
 
+
 .cor_horario-segunda{
     background: rgba(255, 162, 70, 0.4);
 }
@@ -278,6 +279,10 @@ main::-webkit-scrollbar-thumb {
 
 .cor_horario-domingo{
     background: rgba(255, 102, 102, 0.4);
+}
+
+.cor_horario-mesmo-horario {
+    background:rgba(245, 93, 93, 0.4);
 }
 
 .secao_semana {

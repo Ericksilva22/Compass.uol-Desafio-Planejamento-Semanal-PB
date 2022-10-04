@@ -9,7 +9,16 @@ document.addEventListener("click", (selecao) =>{
 
     //excluindo card selecionado
     if(elementoSelecionado.classList.contains("cards-atividades-botao")) {
-        elementoPai.remove();
+        if(elementoPai.childElementCount == 2){ 
+            elementoPai.remove();
+            
+        } else if (elementoPai.childElementCount > 2) {
+            elementoSelecionado.parentElement.remove();
+            if(elementoPai.childElementCount == 2){
+                elementoPai.classList.remove("mesmo-horario");
+            }
+        }
+        
     }
 })
 

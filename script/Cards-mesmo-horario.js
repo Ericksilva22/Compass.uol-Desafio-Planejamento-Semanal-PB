@@ -14,14 +14,14 @@ function CardsCriadosIguais_segunda(z,x,w) {
 
     for(let i = 0; i < ordem.length; i++){
         if(conteudo_segunda.childElementCount > 0 && z == ordem[i].getAttribute('hora_atividade')){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-            ordem[i].appendChild(x);
+            w.style.marginLeft = "1rem";
             ordem[i].appendChild(w);
             ordem[i].classList.add("mesmo-horario");
             auxiliar = auxiliar + 1;
             return auxiliar;
         } 
     }
-
+    
     return auxiliar;
   
 }
@@ -42,7 +42,7 @@ function CardsCriadosIguais_terca(z,x,w) {
 
     for(let i = 0; i < ordem.length; i++){
         if(conteudo_terca.childElementCount > 0 && z == ordem[i].getAttribute('hora_atividade')){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-            ordem[i].appendChild(x);
+            w.style.marginLeft = "1rem";
             ordem[i].appendChild(w);
             ordem[i].classList.add("mesmo-horario");
             auxiliar = auxiliar + 1;
@@ -70,7 +70,7 @@ function CardsCriadosIguais_quarta(z,x,w) {
 
     for(let i = 0; i < ordem.length; i++){
         if(conteudo_quarta.childElementCount > 0 && z == ordem[i].getAttribute('hora_atividade')){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-            ordem[i].appendChild(x);
+            w.style.marginLeft = "1rem";
             ordem[i].appendChild(w);
             ordem[i].classList.add("mesmo-horario");
             auxiliar = auxiliar + 1;
@@ -98,7 +98,7 @@ function CardsCriadosIguais_quinta(z,x,w) {
 
     for(let i = 0; i < ordem.length; i++){
         if(conteudo_quinta.childElementCount > 0 && z == ordem[i].getAttribute('hora_atividade')){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-            ordem[i].appendChild(x);
+            w.style.marginLeft = "1rem";
             ordem[i].appendChild(w);
             ordem[i].classList.add("mesmo-horario");
             auxiliar = auxiliar + 1;
@@ -126,7 +126,7 @@ function CardsCriadosIguais_sexta(z,x,w) {
 
     for(let i = 0; i < ordem.length; i++){
         if(conteudo_sexta.childElementCount > 0 && z == ordem[i].getAttribute('hora_atividade')){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-            ordem[i].appendChild(x);
+            w.style.marginLeft = "1rem";
             ordem[i].appendChild(w);
             ordem[i].classList.add("mesmo-horario");
             auxiliar = auxiliar + 1;
@@ -154,7 +154,7 @@ function CardsCriadosIguais_sabado(z,x,w) {
 
     for(let i = 0; i < ordem.length; i++){
         if(conteudo_sabado.childElementCount > 0 && z == ordem[i].getAttribute('hora_atividade')){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-            ordem[i].appendChild(x);
+            w.style.marginLeft = "1rem";
             ordem[i].appendChild(w);
             ordem[i].classList.add("mesmo-horario");
             auxiliar = auxiliar + 1;
@@ -182,7 +182,7 @@ function CardsCriadosIguais_domingo(z,x,w) {
 
     for(let i = 0; i < ordem.length; i++){
         if(conteudo_domingo.childElementCount > 0 && z == ordem[i].getAttribute('hora_atividade')){ //comparar horario digitado com os existentes.  Só executa a partir do segundo card criado
-            ordem[i].appendChild(x);
+            w.style.marginLeft = "1rem";
             ordem[i].appendChild(w);
             ordem[i].classList.add("mesmo-horario");
             auxiliar = auxiliar + 1;
